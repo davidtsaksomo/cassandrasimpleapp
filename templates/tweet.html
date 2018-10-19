@@ -1,0 +1,24 @@
+ <!DOCTYPE html>
+<html>
+<body>
+<h1>Cassandra Social App</h1>
+<div>
+	<li><a href="/newuser">Daftar User Baru</a></li>
+	<li><a href="/follow">Follow User</a></li>
+	<li><a href="/tweet">New Tweet</a></li>
+	<li><a href="/usertweet">My Tweet</a></li>
+	<li><a href="/timeline">My Timeline</a></li>
+<div>
+<h1>Tweet</h1>
+<form action="/tweet" method="POST" enctype=multipart/form-data>
+  username:<br>
+  <input type="text" name="uname"><br>
+  tweet:<br>
+  <input type="text" name="tweet">
+  <input type="submit" value="Submit">  
+</form> 
+{% autoescape false %}
+    {{status}}
+{% endautoescape %}
+</body>
+</html> 
